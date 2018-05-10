@@ -1,63 +1,60 @@
-package br.up.edu.jpa.dominio;
-import javax.persistence.*;
+package br.edu.up.jpa.dominio;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.*;
+
 
 @Entity
-@Table(name = "produto ")
+@Table(name = "produto")
 public class Produto {
-    @Id
+	@Id
     @GeneratedValue
-    private Integer produtoId;
+    private Long id;
+	@Column
+	private String nome;
+	@Column
+	private Integer numero;
+	
+	@Embedded
+    private Fornecedor_Produto fornecedor_produto;
 
-    @Column
-    private String Nome;
+    @OneToMany
+    private List<Produto> produto = new ArrayList<>();
 
-    @Column
-    private Integer Numero;
-
-    @Embedded
-    private Fornecedor_produto Fornecedor;
-
-    @OneToOne
-    private List<Fornecedor_produto> Fornecedor = new ArrayList<>();
-
-    public Produto (Fornecedor_produto Fornecedor, String Nome, Integer Numero) {
-        this.Fornecedor_produto = Fornecedor;
-        this.Nome  = Nome ;
-        this.Numero = Numero;
-        Fornecedor_produto = new ArrayList<>();
+    public Produto(Fornecedor_Produto  fornecedor_produto, String nome, Integer numero){
+        this.fornecedor_produto = fornecedor_produto;
+        this.nome = nome;
+        this.numero = numero;
+        produto = new ArrayList<>();
     }
 
     protected Produto() {
     }
-
-    public Integer getProdutoId() {
-        return ProdutoId;
-    }
-
-    public nome getNome() {
-        return Nome;
-    }
-    public numero getNumero() {
-    	return Numero;
-    }
-    public void setNome(String Nome) {
-        this.Nome = Nome;
-    }
-    public void setNumero(Integer Numero) {
-        this.Numero = Numero;
-    }
-
-    public List<Fornecedor_produto> getFornecedor() {
-        return Fornecedor  ;
-    }
-
-    @Override
-    public String toString() {
-        return "Produto {" + "ProdutoId=" + ProdutoId + ", " + "nome =" + Nome + ", Num_Produto=" + Numero +
-                "}\n";
-    }
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public Integer getNumero() {
+		return numero;
+	}
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
+	
+@Override
+public String toString() {
+    return "Produto{" + "id=" + id+ ", " + fornecedor_produto + ", nome=" + nome +
+            ", numero=" + numero + "}\n";
 }
-
+}
