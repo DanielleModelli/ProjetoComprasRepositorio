@@ -1,61 +1,60 @@
-package br.up.edu.jpa.dominio;
-import javax.persistence.*;
+package br.edu.up.jpa.dominio;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.*;
 
 @Entity
-@Table(name = "Fornecedor_Produto")
+@Table(name = "fornecedor_produto")
 public class Fornecedor_Produto {
-    @Id
+	@Id
     @GeneratedValue
-    private Integer Empresaid;
-    
-    @Column
-    private String Fornecedor;
-    
-    @Column
-    private Integer Produtoid;
-    
-    @Column
-    private Float Preco;
-    
-    
+	private Long EmpresaId;
+	@Column
+	private String Fornecedor;
+	@Column
+	private Long ProdutoId;
+	@Column
+	private Float Preco;
+	
+	@OneToMany(mappedBy = "fornecedor_produto", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Produto> produto = new ArrayList<>();
 
-    @OneToMany(mappedBy = "Fornecedor_Produto", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Fornecedor_Produto > Fornecedor = new ArrayList<>();
-
-    public Fornecedor_Produto(Integer Empresaid) {
-        this.Empresaid = Empresaid;
+    public Fornecedor_Produto (String Fornecedor) {
+        this.Fornecedor = Fornecedor;
     }
 
     protected Fornecedor_Produto() {
     }
-    public String getFornecedor() {
-        return Fornecedor ;
-    }
-    public Integer getProdutoid() {
-        return Produtoid;
-    }
+	
+	public Long getEmpresaid() {
+		return EmpresaId;
+	}
+	public void setEmpresaid(Long empresaid) {
+		EmpresaId = empresaid;
+	}
+	public String getFornecedor() {
+		return Fornecedor;
+	}
+	public void setFornecedor(String fornecedor) {
+		Fornecedor = fornecedor;
+	}
+	public Long getProdutoid() {
+		return ProdutoId;
+	}
+	public void setProdutoid(Long produtoid) {
+		ProdutoId = produtoid;
+	}
+	public Float getPreco() {
+		return Preco;
+	}
+	public void setPreco(Float preco) {
+		Preco = preco;
+	}
 
-    public Float getPreco() {
-        return Preco;
-    }
-    public void setFornecedor(String Fornecedor ) {
-        this.Fornecedor = Fornecedor;
-    }
-    public void setPreco(float preco) {
-        this.Preco = Preco;
-    }
-    
-    public void adicionarFornecedor(Fornecedor_Produto Fornecedor) {
-        ((List<Fornecedor_Produto>) Fornecedor).add(Fornecedor);
-    }
-
-    @Override
-    public String toString() {
-        return Fornecedor_Produto ("Empresaid=" + Empresaid , "Fornecedor "+ fornecedor ,"Produtoid=" + Produtoid , "preco=" + Preco );
-    }
+      @Override
+      public String toString() {
+    return "Fornecedor_produto{" + "EmpresaId=" + EmpresaId + ", Fornecedor='" + Fornecedor + '\'' + ", ProdutoId=" + ProdutoId + ",Preco=" + Preco + '}';
 }
-
-
+}
