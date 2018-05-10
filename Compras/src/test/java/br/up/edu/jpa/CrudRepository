@@ -1,0 +1,48 @@
+import br.edu.up.jpa.dominio.Produto;
+import br.edu.up.jpa.repository.ProdutoRepository;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class CrudRepository {
+	
+	@Autowired
+    ProdutoRepository produtoRepository;
+	
+	@Test
+    public void exemploDeCrud() {
+        
+        produtoRepository.save(new Produto("Pedal"),  001);
+        produtoRepository.save(new Produto("Guidao"), 002);
+        produtoRepository.save(new Produto("Pneu"),  003);
+        produtoRepository.save(new Produto("Roda"),  004);
+
+        System.out.println("\n*************Todos os produtos *************");
+        produtoRepository.findAll().forEach(System.out::println);
+
+        
+        produtoRepository.findAll().forEach(produto -> {
+            produto.setNome(produto.getNome() );
+            produtoRepository.save(produto);
+        });
+
+        System.out.println("\n**************************");
+        produtoRepository.findAll().forEach(System.out::println);
+
+      produtoRepository.deleteAll();
+      System.out.println("\n*************Produtos excluidos*************");
+      produtoRepository.findAll().forEach(System.out::println);
+
+    }
+
+
+}
+
+
+
+}
