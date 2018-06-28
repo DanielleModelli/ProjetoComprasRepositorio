@@ -16,7 +16,7 @@ import br.edu.up.jpa.Repository.AWBuildVersionRepository;
 
 @RestController
 @RequestMapping("/AWBuildVersion")
-public interface AWBuildVersionResource {	
+public class AWBuildVersionResource {	
 	
 	@Autowired
 	private AWBuildVersionRepository repository;

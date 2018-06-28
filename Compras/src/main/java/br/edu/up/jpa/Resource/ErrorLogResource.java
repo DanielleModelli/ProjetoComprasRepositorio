@@ -18,7 +18,7 @@ import br.edu.up.jpa.Repository.ErrorLogRepository;
 
 @RestController
 @RequestMapping("/ErrorLog")
-public interface ErrorLogResource {	
+public class ErrorLogResource {	
 	
 	@Autowired
 	private ErrorLogRepository repository;

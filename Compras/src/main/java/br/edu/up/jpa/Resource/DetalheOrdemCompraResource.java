@@ -18,7 +18,7 @@ import br.edu.up.jpa.Repository.DetalheOrdemCompraRepository;
 
 @RestController
 @RequestMapping("/DetalheOrdemCompra")
-public interface DetalheOrdemCompraResource {	
+public class DetalheOrdemCompraResource {	
 	
 	@Autowired
 	private DetalheOrdemCompraRepository repository;

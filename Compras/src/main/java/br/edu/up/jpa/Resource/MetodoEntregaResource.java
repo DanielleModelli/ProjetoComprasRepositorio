@@ -18,7 +18,7 @@ import br.edu.up.jpa.Repository.MetodoEntregaRepository;
 
 @RestController
 @RequestMapping("/MetodoEntrega")
-public interface MetodoEntregaResource {	
+public class MetodoEntregaResource {	
 	
 	@Autowired
 	private MetodoEntregaRepository repository;

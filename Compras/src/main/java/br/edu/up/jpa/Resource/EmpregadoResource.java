@@ -18,7 +18,7 @@ import br.edu.up.jpa.Repository.EmpregadoRepository;
 
 @RestController
 @RequestMapping("/Empregado")
-public interface EmpregadoResource {	
+public class EmpregadoResource {	
 	
 	@Autowired
 	private EmpregadoRepository repository;

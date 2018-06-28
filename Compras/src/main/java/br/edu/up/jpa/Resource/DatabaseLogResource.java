@@ -18,7 +18,7 @@ import br.edu.up.jpa.Repository.DatabaseLogRepository;
 
 @RestController
 @RequestMapping("/DatabaseLog")
-public interface DatabaseLogResource {	
+public class DatabaseLogResource {	
 	
 	@Autowired
 	private DatabaseLogRepository repository;

@@ -17,7 +17,7 @@ public class AWBuildVersion {
 	@Column(name = "SystemInformationID")
 	private Integer SystemInformationID ;
 
-	@Column(name = "[Database Version]")
+	@Column(name = "DatabaseVersion")
 	private String DatabaseVersion; 
 	
 	@Column(name = "VersionDate")

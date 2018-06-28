@@ -18,7 +18,7 @@ import br.edu.up.jpa.Repository.CabecalhoOrdemCompraRepository;
 
 @RestController
 @RequestMapping("/CabecalhoOrdemCompra")
-public interface CabecalhoOrdemCompraResource {	
+public class CabecalhoOrdemCompraResource {	
 	
 	@Autowired
 	private CabecalhoOrdemCompraRepository repository;

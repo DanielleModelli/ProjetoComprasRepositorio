@@ -18,7 +18,7 @@ import br.edu.up.jpa.Repository.ProdutoRepository;
 
 @RestController
 @RequestMapping("/Produto")
-public interface ProdutoResource {	
+public class ProdutoResource {	
 	
 	@Autowired
 	private ProdutoRepository repository;

@@ -18,7 +18,7 @@ import br.edu.up.jpa.Repository.UnidadeMedidaRepository;
 
 @RestController
 @RequestMapping("/UnidadeMedida")
-public interface UnidadeMedidaResource {	
+public class UnidadeMedidaResource {	
 	
 	@Autowired
 	private UnidadeMedidaRepository repository;

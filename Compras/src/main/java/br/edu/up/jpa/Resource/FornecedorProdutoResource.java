@@ -19,7 +19,7 @@ import br.edu.up.jpa.Repository.FornecedorProdutoRepository;
 
 @RestController
 @RequestMapping("/FornecedorProduto")
-public interface FornecedorProdutoResource {	
+public class FornecedorProdutoResource {	
 	
 	@Autowired
 	private FornecedorProdutoRepository repository;

@@ -20,7 +20,7 @@ import br.edu.up.jpa.Repository.EntidadeComercialRepository;
 
 @RestController
 @RequestMapping("/EntidadeComercial")
-public interface EntidadeComercialResource {	
+public class EntidadeComercialResource {	
 	
 	@Autowired
 	private EntidadeComercialRepository repository;
