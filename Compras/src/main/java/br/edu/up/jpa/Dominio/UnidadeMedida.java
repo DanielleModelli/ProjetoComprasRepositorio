@@ -8,17 +8,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema="Prodution", name = "UnidadeMedida")
+@Table(schema="production", name = "unidademedida")
 public class UnidadeMedida {
 	
 	@Id
-	@Column(name = "UnidadeMedidaCod")
+	@Column(name = "unidademedidacod")
 	private String UnidadeMedidaCod ;
 
-	@Column(name = "Nome")
+	@Column(name = "nome")
 	private String Nome; 
 	
-	@Column(name = "DataModificacao")
+	@Column(name = "datamodificacao")
 	private Date DataModificacao;
 
 	public String getUnidadeMedidaCod() {

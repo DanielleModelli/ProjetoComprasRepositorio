@@ -8,18 +8,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema="Prodution", name = "Produto")
+@Table(schema="production", name = "produto")
 public class Produto {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ProdutoID")
+	@Column(name = "produtoid")
 	private Integer ProdutoID ;
 
-	@Column(name = "Nome")
+	@Column(name = "nome")
 	private String Nome; 
 	
-	@Column(name = "ProdutoNum")
+	@Column(name = "produtonum")
 	private String ProdutoNum;
 
 	public Integer getProdutoID() {

@@ -10,41 +10,129 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema="Purchasing", name = "FornecedorProdutos")
+@Table(schema="purchasing", name = "fornecedorprodutos")
 public class FornecedorProduto {
 
 	@Id
-	@Column(name = "ProductID")
+	@Column(name = "productid")
 	private Integer ProductID ;
 	
-	@Column(name = "BusinessEntityID")
+	@Column(name = "businessentityid")
 	private Integer BusinessEntityID ;
 
-	@Column(name = "TempoMedio")
+	@Column(name = "tempomedio")
 	private Integer TempoMedio; 
 	
-	@Column(name = "PrecoPadrao")
+	@Column(name = "precopadrao")
 	private Double PrecoPadrao;
 	
-	@Column(name = "UltimoCusto")
+	@Column(name = "ultimocusto")
 	private Double UltimoCusto;
 	
-	@Column(name = "UltimaData")
+	@Column(name = "ultimadata")
 	private Date UltimaData;
 	
-	@Column(name = "QuantMinima")
+	@Column(name = "quantminima")
 	private Integer QuantMinima;
 	
-	@Column(name = "QuantMixima")
-	private Integer QuantMixima;
+	@Column(name = "quantmaxima")
+	private Integer QuantMaxima;
 	
-	@Column(name = "NaOrdem")
+	@Column(name = "naordem")
 	private Integer NaOrdem;
 	
-	@Column(name = "UnidadeMedidaCod")
+	@Column(name = "unidademedidacod")
 	private String UnidadeMedidaCod;
 	
-	@Column(name = "DataModificacao")
+	@Column(name = "datamodificacao")
 	private Date DataModificacao;
+
+	public Integer getProductID() {
+		return ProductID;
+	}
+
+	public void setProductID(Integer productID) {
+		ProductID = productID;
+	}
+
+	public Integer getBusinessEntityID() {
+		return BusinessEntityID;
+	}
+
+	public void setBusinessEntityID(Integer businessEntityID) {
+		BusinessEntityID = businessEntityID;
+	}
+
+	public Integer getTempoMedio() {
+		return TempoMedio;
+	}
+
+	public void setTempoMedio(Integer tempoMedio) {
+		TempoMedio = tempoMedio;
+	}
+
+	public Double getPrecoPadrao() {
+		return PrecoPadrao;
+	}
+
+	public void setPrecoPadrao(Double precoPadrao) {
+		PrecoPadrao = precoPadrao;
+	}
+
+	public Double getUltimoCusto() {
+		return UltimoCusto;
+	}
+
+	public void setUltimoCusto(Double ultimoCusto) {
+		UltimoCusto = ultimoCusto;
+	}
+
+	public Date getUltimaData() {
+		return UltimaData;
+	}
+
+	public void setUltimaData(Date ultimaData) {
+		UltimaData = ultimaData;
+	}
+
+	public Integer getQuantMinima() {
+		return QuantMinima;
+	}
+
+	public void setQuantMinima(Integer quantMinima) {
+		QuantMinima = quantMinima;
+	}
+
+	public Integer getQuantMaxima() {
+		return QuantMaxima;
+	}
+
+	public void setQuantMaxima(Integer quantMaxima) {
+		QuantMaxima = quantMaxima;
+	}
+
+	public Integer getNaOrdem() {
+		return NaOrdem;
+	}
+
+	public void setNaOrdem(Integer naOrdem) {
+		NaOrdem = naOrdem;
+	}
+
+	public String getUnidadeMedidaCod() {
+		return UnidadeMedidaCod;
+	}
+
+	public void setUnidadeMedidaCod(String unidadeMedidaCod) {
+		UnidadeMedidaCod = unidadeMedidaCod;
+	}
+
+	public Date getDataModificacao() {
+		return DataModificacao;
+	}
+
+	public void setDataModificacao(Date dataModificacao) {
+		DataModificacao = dataModificacao;
+	}
 	
 }

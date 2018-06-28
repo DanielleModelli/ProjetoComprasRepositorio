@@ -22,21 +22,11 @@ public class ProdutoResource {
 	
 	@Autowired
 	private ProdutoRepository repository;
-	
-	@PostMapping()
-	public Produto postProduto(@RequestBody @Valid Produto produto) {
-		return repository.save(produto);
-	}
-	
+			
 	@GetMapping(produces="application/json")
 	public @ResponseBody Iterable<Produto> listaProduto() {
 		Iterable<Produto> listaProduto = repository.findAll();
 		return listaProduto;
 	}
-	
-	@DeleteMapping()
-	public Produto deletaProduto(@RequestBody Produto produto) {
-		repository.delete(produto);
-		return produto;
-	}
+		
 }

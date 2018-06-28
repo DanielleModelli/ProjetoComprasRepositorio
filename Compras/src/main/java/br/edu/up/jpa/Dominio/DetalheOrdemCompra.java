@@ -13,42 +13,42 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(schema="Purchasing", name = "DetalheOrdemCompra")
+@Table(schema="purchasing", name = "detalheordemcompra")
 public class DetalheOrdemCompra {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "OrdemCompraID")
+	@Column(name = "ordemcompraid")
 	private Integer IdOrdemCompra ;
 
-	@Column(name = "DetalheOrdemCompraID")
+	@Column(name = "detalheordemcompraid")
 	private Integer IdDetalheOrdemCompra; 
 	
-	@Column(name = "DataVencimento")
+	@Column(name = "datavencimento")
 	private Date DataVencimento;
 	
-	@Column(name = "OrderQty")
+	@Column(name = "orderqty")
 	private Integer QuantidadePedido;
 	
-	@Column(name = "ProdutoID")
+	@Column(name = "produtoid")
 	private Integer IdProduto;
 	
-	@Column(name = "UnitPrice")
+	@Column(name = "unitprice")
 	private String PrecoUnitario;
 	
-	@Column(name = "LineTotal")
+	@Column(name = "linetotal")
 	private String PrecoTotal;
 	
-	@Column(name = "ReceivedQty")
+	@Column(name = "receivedqty")
 	private String QuantidadeRecebida;
 	
-	@Column(name = "RejectedQty")
+	@Column(name = "rejectedqty")
 	private String QuantidadeRejeitada;
 	
-	@Column(name = "StockedQty")
+	@Column(name = "stockedqty")
 	private String QuantidadeEstocada;
 	
-	@Column(name = "DataModificacao")
+	@Column(name = "datamodificacao")
 	private Date DataAlteracao;
 
 	public Integer getIdOrdemCompra() {

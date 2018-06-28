@@ -8,15 +8,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema="HumanResources", name = "Empregado")
+@Table(schema="humanresources", name = "empregado")
 public class Empregado {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "EntidadeComercialID")
+	@Column(name = "entidadecomercialid")
 	private Integer EntidadeComercialID ;
 
-	@Column(name = "NumeroID")
+	@Column(name = "numeroid")
 	private String NumeroID;
 
 	public Integer getEntidadeComercialID() {

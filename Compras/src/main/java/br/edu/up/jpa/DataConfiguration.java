@@ -16,7 +16,7 @@ public class DataConfiguration {
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        dataSource.setUrl("jdbc:sqlserver://localhost:1433;databaseName=Compras;schemaName=Purchasing;integratedSecurity=true;");
+        dataSource.setUrl("jdbc:sqlserver://localhost:1433;databaseName=Compras;integratedSecurity=true;");
         dataSource.setUsername("sa");
         dataSource.setPassword("123");
      

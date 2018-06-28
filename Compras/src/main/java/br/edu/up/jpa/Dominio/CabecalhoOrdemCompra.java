@@ -9,53 +9,53 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema="Purchasing", name = "CabecalhoOrdemCompra")
+@Table(schema="purchasing", name = "cabecalhoordemcompra")
 public class CabecalhoOrdemCompra {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "OrdemCompraID")
-	private Integer IdOrdemCompra ;
+	@Column(name = "ordemcompraid")
+	private Integer OrdemCompraID ;
 
-	@Column(name = "NumeroRevisao")
+	@Column(name = "numerorevisao")
 	private String NumeroRevisao; 
 	
-	@Column(name = "Status")
+	@Column(name = "status")
 	private String Status;
 	
-	@Column(name = "EmpregadoID")
+	@Column(name = "empregadoid")
 	private Integer IdEmpregado;
 	
-	@Column(name = "FornecedorID")
+	@Column(name = "fornecedorid")
 	private Integer IdFornecedor;
 	
-	@Column(name = "MetodoEntregaID")
+	@Column(name = "metodoentregaid")
 	private Integer IdMetodoEntrega;
 	
-	@Column(name = "OrderDate")
+	@Column(name = "orderdate")
 	private Date DataOrdem;
 	
-	@Column(name = "ShipDate")
-	private Date DataEntrega;
+	@Column(name = "shipdate")
+	private Date ShipDate;
 
-	@Column(name = "SubTotal")
+	@Column(name = "subtotal")
 	private String SubTotal; 
 	
-	@Column(name = "Freight")
+	@Column(name = "freight")
 	private String Frete; 
 	
-	@Column(name = "TotalDue")
+	@Column(name = "totaldue")
 	private String TotalDevido;
 	
-	@Column(name = "DataModificacao")
+	@Column(name = "datamodificacao")
 	private Date DataModificacao;
 
 	public Integer getIdOrdemCompra() {
-		return IdOrdemCompra;
+		return OrdemCompraID;
 	}
 
 	public void setIdOrdemCompra(Integer idOrdemCompra) {
-		IdOrdemCompra = idOrdemCompra;
+		OrdemCompraID = idOrdemCompra;
 	}
 
 	public String getNumeroRevisao() {
@@ -107,11 +107,11 @@ public class CabecalhoOrdemCompra {
 	}
 
 	public Date getDataEntrega() {
-		return DataEntrega;
+		return ShipDate;
 	}
 
 	public void setDataEntrega(Date dataEntrega) {
-		DataEntrega = dataEntrega;
+		ShipDate = dataEntrega;
 	}
 
 	public String getSubTotal() {

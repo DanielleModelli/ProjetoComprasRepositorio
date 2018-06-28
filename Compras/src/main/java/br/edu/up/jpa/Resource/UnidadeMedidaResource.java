@@ -22,21 +22,12 @@ public class UnidadeMedidaResource {
 	
 	@Autowired
 	private UnidadeMedidaRepository repository;
-	
-	@PostMapping()
-	public UnidadeMedida postUnidadeMedida(@RequestBody @Valid UnidadeMedida unidadeMedida) {
-		return repository.save(unidadeMedida);
-	}
-	
+			
 	@GetMapping(produces="application/json")
 	public @ResponseBody Iterable<UnidadeMedida> listaUnidadeMedida() {
 		Iterable<UnidadeMedida> listaUnidadeMedida = repository.findAll();
 		return listaUnidadeMedida;
 	}
 	
-	@DeleteMapping()
-	public UnidadeMedida deletaUnidadeMedida(@RequestBody UnidadeMedida unidadeMedida) {
-		repository.delete(unidadeMedida);
-		return unidadeMedida;
-	}
+	
 }

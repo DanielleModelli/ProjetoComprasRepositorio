@@ -10,27 +10,27 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema="Purchasing", name = "MetodoEntrega")
+@Table(schema="purchasing", name = "metodoentrega")
 public class MetodoEntrega {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "MetodoEntregaID")
+	@Column(name = "metodoentregaid")
 	private Integer MetodoEntregaID ;
 
-	@Column(name = "Nome")
+	@Column(name = "nome")
 	private String Nome; 
 	
-	@Column(name = "ShipBase")
+	@Column(name = "shipbase")
 	private Double ShipBase;
 	
-	@Column(name = "ShipRate")
+	@Column(name = "shiprate")
 	private Double ShipRate;
 	
 	@Column(name = "rowguid")
 	private String rowguid;
 			
-	@Column(name = "DataModificacao")
+	@Column(name = "datamodificacao")
 	private Date DataModificacao;
 
 	public Integer getMetodoEntregaID() {

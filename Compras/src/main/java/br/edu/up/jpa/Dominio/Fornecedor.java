@@ -10,33 +10,33 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema="Purchasing", name = "Fornecedor")
+@Table(schema="Purchasing", name = "fornecedor")
 public class Fornecedor {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "EntidadeComercialID")
+	@Column(name = "entidadecomercialid")
 	private Integer EntidadeComercialID ;
 
-	@Column(name = "NumeroCont")
+	@Column(name = "numerocont")
 	private String NumeroCont; 
 	
-	@Column(name = "Nome")
+	@Column(name = "nome")
 	private String Nome;
 	
-	@Column(name = "CreditRating")
+	@Column(name = "creditrating")
 	private Integer ClassificacaoCredito;
 	
-	@Column(name = "StatusFornecedor")
+	@Column(name = "statusfornecedor")
 	private boolean StatusFornecedor;
 	
-	@Column(name = "ActiveFlag")
+	@Column(name = "activeflag")
 	private boolean ActiveFlag;
 	
-	@Column(name = "WebServiceURLCompras")
+	@Column(name = "webserviceurlcompras")
 	private String WebServiceURLCompras;
 	
-	@Column(name = "DataModificacao")
+	@Column(name = "datamodificacao")
 	private Date DataModificacao;
 
 	public Integer getEntidadeComercialID() {

@@ -10,17 +10,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema="Person", name = "EntidadeComercial")
+@Table(schema="person", name = "entidadecomercial")
 public class EntidadeComercial {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "BusinessEntityID")
+	@Column(name = "businessentityid")
 	private Integer BusinessEntityID ;
 
 	@Column(name = "rowguid")
 	private String NumeroID;
 
-	@Column(name = "DataModificacao")
+	@Column(name = "datamodificacao")
 	private Date DataModificacao;
 }
