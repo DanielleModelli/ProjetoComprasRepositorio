@@ -1,5 +1,3 @@
-
-
 package br.edu.up.jpa.Resource;
 
 import javax.validation.Valid;
@@ -19,7 +17,7 @@ import br.edu.up.jpa.Repository.EntidadeComercialRepository;
 
 
 @RestController
-@RequestMapping("/EntidadeComercial")
+@RequestMapping("/entidadeComercial")
 public class EntidadeComercialResource {	
 	
 	@Autowired
@@ -30,7 +28,7 @@ public class EntidadeComercialResource {
 		return repository.save(entidadeComercial);
 	}
 	
-	@GetMapping(produces="application/json")
+	@GetMapping("/listar")
 	public @ResponseBody Iterable<EntidadeComercial> listaEntidadeComercial() {
 		Iterable<EntidadeComercial> listaEntidadeComercial = repository.findAll();
 		return listaEntidadeComercial;

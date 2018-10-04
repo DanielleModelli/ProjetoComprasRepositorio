@@ -1,7 +1,6 @@
 package br.edu.up.jpa.Dominio;
 
 import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema="person", name = "entidadecomercial")
+@Table(name = "entidadecomercial")
 public class EntidadeComercial {
 
 	@Id
@@ -22,5 +21,30 @@ public class EntidadeComercial {
 	private String NumeroID;
 
 	@Column(name = "datamodificacao")
-	private Date DataModificacao;
+	private Date DataAlteracao;
+	
+	public Integer getBusinessEntitylID() {
+		return BusinessEntityID;
+	}
+	
+	public void setBusinessEntityID(Integer businessEntityID) {
+		BusinessEntityID = businessEntityID;
+	}
+
+	public String getNumeroID() {
+		return NumeroID;
+	}
+
+	public void setNumeroID(String numeroID) {
+		NumeroID = numeroID;
+	} 
+	
+
+	public Date getDataAlteracao() {
+		return DataAlteracao;
+	}
+
+	public void setDataAlteracao(Date dataAlteracao) {
+		DataAlteracao = dataAlteracao;
+	}
 }

@@ -18,11 +18,9 @@ public class UnidadeMedidaResource {
 	@Autowired
 	private UnidadeMedidaRepository repository;
 			
-	@GetMapping(produces="application/json")
+	@GetMapping("/listar")
 	public @ResponseBody Iterable<UnidadeMedida> listaUnidadeMedida() {
 		Iterable<UnidadeMedida> listaUnidadeMedida = repository.findAll();
 		return listaUnidadeMedida;
 	}
-	
-	
 }

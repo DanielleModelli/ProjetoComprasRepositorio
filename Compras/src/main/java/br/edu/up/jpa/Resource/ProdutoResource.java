@@ -9,16 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 import br.edu.up.jpa.Dominio.Produto;
 import br.edu.up.jpa.Repository.ProdutoRepository;
 
-
-
 @RestController
-@RequestMapping("/Produto")
+@RequestMapping("/produto")
 public class ProdutoResource {	
 	
 	@Autowired
 	private ProdutoRepository repository;
 			
-	@GetMapping(produces="application/json")
+	@GetMapping("/listar")
 	public @ResponseBody Iterable<Produto> listaProduto() {
 		Iterable<Produto> listaProduto = repository.findAll();
 		return listaProduto;

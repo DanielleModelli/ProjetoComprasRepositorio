@@ -17,7 +17,7 @@ import br.edu.up.jpa.Repository.MetodoEntregaRepository;
 
 
 @RestController
-@RequestMapping("/MetodoEntrega")
+@RequestMapping("/metodoEntrega")
 public class MetodoEntregaResource {	
 	
 	@Autowired
@@ -28,7 +28,7 @@ public class MetodoEntregaResource {
 		return repository.save(metodoEntrega);
 	}
 	
-	@GetMapping(produces="application/json")
+	@GetMapping("/listar")
 	public @ResponseBody Iterable<MetodoEntrega> listaMetodoEntrega() {
 		Iterable<MetodoEntrega> listaMetodoEntrega = repository.findAll();
 		return listaMetodoEntrega;

@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema="purchasing", name = "cabecalhoordemcompra")
+@Table(name = "cabecalhoordemcompra")
 public class CabecalhoOrdemCompra {
 
 	@Id
@@ -18,10 +18,10 @@ public class CabecalhoOrdemCompra {
 	private Integer OrdemCompraID ;
 
 	@Column(name = "numerorevisao")
-	private String NumeroRevisao; 
+	private Integer NumeroRevisao; 
 	
 	@Column(name = "status")
-	private String Status;
+	private Integer Status;
 	
 	@Column(name = "empregadoid")
 	private Integer IdEmpregado;
@@ -58,19 +58,19 @@ public class CabecalhoOrdemCompra {
 		OrdemCompraID = idOrdemCompra;
 	}
 
-	public String getNumeroRevisao() {
+	public Integer getNumeroRevisao() {
 		return NumeroRevisao;
 	}
 
-	public void setNumeroRevisao(String numeroRevisao) {
+	public void setNumeroRevisao(Integer numeroRevisao) {
 		NumeroRevisao = numeroRevisao;
 	}
 
-	public String getStatus() {
+	public Integer getStatus() {
 		return Status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(Integer status) {
 		Status = status;
 	}
 

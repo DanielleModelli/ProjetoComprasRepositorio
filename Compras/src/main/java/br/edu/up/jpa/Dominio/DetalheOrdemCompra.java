@@ -2,18 +2,15 @@ package br.edu.up.jpa.Dominio;
 
 import java.sql.Date;
 import javax.persistence.Column;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
 @Entity
-@Table(schema="purchasing", name = "detalheordemcompra")
+@Table(name = "detalheordemcompra")
 public class DetalheOrdemCompra {
 
 	@Id

@@ -18,7 +18,7 @@ import br.edu.up.jpa.Repository.FornecedorProdutoRepository;
 
 
 @RestController
-@RequestMapping("/FornecedorProduto")
+@RequestMapping("/fornecedorProduto")
 public class FornecedorProdutoResource {	
 	
 	@Autowired
@@ -29,7 +29,7 @@ public class FornecedorProdutoResource {
 		return repository.save(fornecedorProduto);
 	}
 	
-	@GetMapping(produces="application/json")
+	@GetMapping("/listar")
 	public @ResponseBody Iterable<FornecedorProduto> listaFornecedorProduto() {
 		Iterable<FornecedorProduto> listaFornecedorProduto = repository.findAll();
 		return listaFornecedorProduto;

@@ -5,15 +5,15 @@ import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+//import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.bind.annotation.RequestMapping;
 
-@ComponentScan({ "br.edu.up.jpa.Resource" })
+//@ComponentScan({ "br.edu.up.jpa.Resource" })
+//@EnableJpaRepositories({ "br.edu.up.jpa.Resource" })
 @SpringBootApplication
 @EnableRabbit
-@EnableEurekaClient
+//@EnableEurekaClient
 public class ComprasCorpApplication {
 
 	@Value("${queue.order.name}")
@@ -28,9 +28,9 @@ public class ComprasCorpApplication {
 		return new Queue(orderQueue, true);
 	}
 	
-	 @RequestMapping("/greeting")
-	    public String greeting() {
-	        return "Hello from EurekaClient!";
-	    }
+	// @RequestMapping("/greeting")
+	    //public String greeting() {
+	        //return "Hello from EurekaClient!";
+	    //}
 	 
 }

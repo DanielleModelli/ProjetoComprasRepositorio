@@ -17,18 +17,18 @@ import br.edu.up.jpa.Repository.EmpregadoRepository;
 
 
 @RestController
-@RequestMapping("/Empregado")
+@RequestMapping("/empregado")
 public class EmpregadoResource {	
 	
 	@Autowired
 	private EmpregadoRepository repository;
 	
-	@PostMapping()
+	@PostMapping("/")
 	public Empregado postEmpregado(@RequestBody @Valid Empregado empregado) {
 		return repository.save(empregado);
 	}
 	
-	@GetMapping(produces="application/json")
+	@GetMapping("/listar")
 	public @ResponseBody Iterable<Empregado> listaEmpregado() {
 		Iterable<Empregado> listaEmpregado = repository.findAll();
 		return listaEmpregado;
